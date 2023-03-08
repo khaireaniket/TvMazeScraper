@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  tvmazescraper.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5000:80"
+    image: 'tvmazescraper'
+    build:
+      context: .
+      dockerfile: Dockerfile
